@@ -1,62 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Maya Matcha · Links</title>
-<style>
-  :root{ --bg:#f6f1e8; --fg:#2c2a26; --muted:#7b756a; --card:#fff; --accent:#7a8b5c; --accent2:#c9b79c; --border:#e6ddcd; }
-  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#1b1a17; --fg:#ece7dd; --muted:#a29b8d; --card:#262420; --accent:#a7b884; --accent2:#8a7a5f; --border:#39352d; } }
-  :root[data-theme="dark"]{ --bg:#1b1a17; --fg:#ece7dd; --muted:#a29b8d; --card:#262420; --accent:#a7b884; --accent2:#8a7a5f; --border:#39352d; }
-  *{ box-sizing:border-box; }
-  body{ margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
-  .wrap{ max-width:520px; margin:0 auto; padding:34px 18px 70px; }
-  .head{ text-align:center; margin-bottom:22px; }
-  .avatar{ width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:40px;margin:0 auto 12px; }
-  h1{ font-size:1.35rem; margin:0 0 2px; }
-  .handle{ color:var(--accent); font-weight:600; }
-  .bio{ color:var(--muted); font-size:.95rem; margin:6px 0 0; }
-  h2{ font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:26px 0 10px; }
-  a.btn{ display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--fg); background:var(--card); border:1px solid var(--border); border-radius:14px; padding:14px 16px; margin:9px 0; transition:transform .08s, border-color .12s; }
-  a.btn:hover{ transform:translateY(-1px); border-color:var(--accent); }
-  a.btn .emoji{ font-size:1.3rem; }
-  a.btn .t{ font-weight:600; }
-  a.btn .d{ color:var(--muted); font-size:.82rem; font-weight:400; }
-  a.btn .col{ display:flex; flex-direction:column; }
-  .disc{ color:var(--muted); font-size:.78rem; text-align:center; margin-top:26px; line-height:1.5; }
-  .disc a{ color:var(--accent); }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Maya</title>
+  <style>
+    :root { --bg:#2A2317; --accent:#C9A96A; --fg:#FBF4E6; }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; min-height:100vh; color:var(--fg);
+      background:
+        radial-gradient(120% 80% at 50% -10%, rgba(201,169,106,.22), transparent 60%),
+        var(--bg);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+      display:flex; justify-content:center; padding:34px 18px 48px;
+    }
+    .wrap { width:100%; max-width:520px; text-align:center; }
+    .avatar {
+      width:96px; height:96px; line-height:96px; margin:6px auto 14px;
+      font-size:46px; border-radius:50%;
+      background:rgba(201,169,106,.14); border:2px solid var(--accent);
+      box-shadow:0 0 0 6px rgba(201,169,106,.06);
+    }
+    h1 { font-size:26px; letter-spacing:.3px; margin:0 0 2px; }
+    .tagline { font-size:13px; letter-spacing:2px; text-transform:uppercase; opacity:.7; margin:0 0 12px; }
+    .bio { font-size:16px; line-height:1.55; opacity:.92; margin:0 auto 24px; max-width:420px; }
+    .btn {
+      display:block; text-decoration:none; color:var(--fg);
+      background:rgba(255,255,255,.04); border:1px solid rgba(201,169,106,.22);
+      border-radius:16px; padding:15px 18px; margin:12px 0; text-align:center;
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .btn:hover { transform: translateY(-2px); border-color:var(--accent); background:rgba(201,169,106,.10); }
+    .btn-label { display:block; font-size:17px; font-weight:600; }
+    .btn-sub { display:block; font-size:13px; opacity:.72; margin-top:3px; font-family:Inter,system-ui,sans-serif; }
+    .btn.top { background:var(--accent); color:#2A2317; border-color:var(--accent); font-weight:700; }
+    .btn.top:hover { filter:brightness(1.06); }
+    .btn.top .btn-label { color:#2A2317; }
+    .socials { display:flex; gap:10px; justify-content:center; margin:24px 0 16px; flex-wrap:wrap; }
+    .social {
+      text-decoration:none; color:var(--fg); font-size:13px; font-weight:600;
+      font-family:Inter,system-ui,sans-serif;
+      padding:9px 16px; border-radius:999px; border:1px solid rgba(201,169,106,.30);
+    }
+    .social:hover { border-color:var(--accent); color:var(--accent); }
+    .disclosure {
+      font-size:11.5px; line-height:1.55; opacity:.62; margin:20px auto 0; max-width:420px;
+      font-family:Inter,system-ui,sans-serif;
+    }
+  </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="head">
-    <div class="avatar">🍵</div>
-    <h1>Maya Matcha</h1>
-    <div class="handle">@maya.matcha2</div>
-    <p class="bio">Langsame Morgen &amp; Matcha-Rituale · Clean-Girl-Ästhetik · sanftes ASMR<br>KI-Kunstfigur · KI-generiert</p>
-  </div>
-
-  <a class="btn" href="shop.html" style="border-color:var(--accent);"><span class="emoji">🛍️</span><span class="col"><span class="t">Alle Favoriten &amp; Produkte</span><span class="d">Mein kompletter Shop – teils mit Anleitungen</span></span></a>
-
-  <h2>🍵 Matcha</h2>
-  <a class="btn" href="https://www.amazon.de/s?k=matcha+set+bambusbesen+schale+chasen" target="_blank" rel="nofollow sponsored noopener"><span class="emoji">🍵</span><span class="col"><span class="t">Matcha-Set (Besen + Schale)</span><span class="d">Mein Komplettset zum Zubereiten</span></span></a>
-  <a class="btn" href="https://www.amazon.de/s?k=matcha+pulver+ceremonial+bio" target="_blank" rel="nofollow sponsored noopener"><span class="emoji">🌿</span><span class="col"><span class="t">Ceremonial Matcha Pulver (Bio)</span><span class="d">Leuchtend grün, hochwertig</span></span></a>
-  <a class="btn" href="https://www.amazon.de/s?k=glas+tumbler+bambusdeckel+strohhalm" target="_blank" rel="nofollow sponsored noopener"><span class="emoji">🥛</span><span class="col"><span class="t">Glas-Tumbler mit Strohhalm</span><span class="d">Für den Iced-Matcha-Look</span></span></a>
-
-  <h2>🧴 Clean-Girl / Skincare</h2>
-  <a class="btn" href="https://www.amazon.de/s?k=gesichtsreiniger+gel+sensitive" target="_blank" rel="nofollow sponsored noopener"><span class="emoji">🧴</span><span class="col"><span class="t">Sanfter Gesichtsreiniger</span><span class="d">Schritt 1 der Routine</span></span></a>
-  <a class="btn" href="https://www.amazon.de/s?k=gua+sha+jade+roller+set" target="_blank" rel="nofollow sponsored noopener"><span class="emoji">💆</span><span class="col"><span class="t">Gua Sha / Jade-Roller</span><span class="d">Ästhetisch &amp; entspannend</span></span></a>
-
-  <h2>🫧 ASMR &amp; Slow-Living</h2>
-  <a class="btn" href="https://www.amazon.de/s?k=squishy+set+pastell+beige+antistress" target="_blank" rel="nofollow sponsored noopener"><span class="emoji">🫧</span><span class="col"><span class="t">Squishy-Set (beige/creme)</span><span class="d">Für den täglichen Reset</span></span></a>
-  <a class="btn" href="https://www.amazon.de/s?k=leinen+bettwaesche+creme+beige" target="_blank" rel="nofollow sponsored noopener"><span class="emoji">🌿</span><span class="col"><span class="t">Leinen-Bettwäsche (creme)</span><span class="d">Slow-Living-Ästhetik</span></span></a>
-  <a class="btn" href="https://www.amazon.de/s?k=duftkerze+vanille+sandelholz" target="_blank" rel="nofollow sponsored noopener"><span class="emoji">🕯️</span><span class="col"><span class="t">Duftkerze (Vanille/Sandelholz)</span><span class="d">Cozy für Abendrituale</span></span></a>
-
-  <h2>▶️ Folge Maya</h2>
-  <a class="btn" href="https://www.instagram.com/maya.matcha2" target="_blank" rel="noopener"><span class="emoji">📸</span><span class="col"><span class="t">Instagram</span><span class="d">@maya.matcha2</span></span></a>
-  <a class="btn" href="https://www.youtube.com/@maya.matcha2" target="_blank" rel="noopener"><span class="emoji">▶️</span><span class="col"><span class="t">YouTube</span><span class="d">Maya Matcha</span></span></a>
-
-  <p class="disc">🛍️ Einige Links sind Amazon-Partner-Links – kaufst du darüber, unterstützt du Maya ohne Mehrkosten. Maya ist eine KI-Kunstfigur (KI-generiert). · <a href="privacy.html">Datenschutz</a></p>
-</div>
+  <main class="wrap">
+    <div class="avatar">🤎</div>
+    <h1>Maya</h1>
+    <p class="tagline">Ehrlich · kein Hype</p>
+    <p class="bio">Ich teste Alltag, Geld &amp; Selfcare – und sage dir, was wirklich funktioniert und was Geldverschwendung ist.</p>
+    
+    
+      <a class="btn" href="https://www.amazon.de/s?k=abfluss%20reinigungsspirale%20haarentferner&amp;tag=mayamatcha-21&amp;ascsubtag=maya_a_abfluss-reinigungsspirale-haarentferner" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">🏠 Abfluss-Reinigungsspirale (Haarentferner)</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=akku%20handstaubsauger%20kabellos&amp;tag=mayamatcha-21&amp;ascsubtag=maya_a_akku-handstaubsauger" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">🏠 Akku-Handstaubsauger</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=vakuumbeutel%20aufbewahrung%20kleidung%20set&amp;tag=mayamatcha-21&amp;ascsubtag=maya_a_vakuum-aufbewahrungsbeutel-set" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">🏠 Vakuum-Aufbewahrungsbeutel-Set</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=led%20bewegungsmelder%20licht%20akku%20magnet&amp;tag=mayamatcha-21&amp;ascsubtag=maya_a_magnet-led-licht-mit-bewegungssensor-akk" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">🏠 Magnet-LED-Licht mit Bewegungssensor (Akku)</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=silikon%20stretch%20deckel%20set&amp;tag=mayamatcha-21&amp;ascsubtag=maya_a_silikon-stretch-deckel-set" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">🏠 Silikon-Stretch-Deckel-Set</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=schubladen%20organizer%20set%20verstellbar&amp;tag=mayamatcha-21&amp;ascsubtag=maya_a_schubladen-organizer-set" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">🏠 Schubladen-Organizer-Set</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=fusselrasierer%20elektrisch&amp;tag=mayamatcha-21&amp;ascsubtag=maya_a_elektrischer-fusselrasierer" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">🏠 Elektrischer Fusselrasierer</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=zugluftstopper%20t%C3%BCrdichtung%20selbstklebend&amp;tag=mayamatcha-21&amp;ascsubtag=maya_a_zugluftstopper-t-rdichtung" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">🏠 Zugluftstopper / Türdichtung</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=die%201%20prozent%20methode%20james%20clear%20buch&amp;tag=mayamatcha-21&amp;ascsubtag=maya_b_die-1-methode-atomic-habits-james-clear" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">📈 Die 1%-Methode (Atomic Habits) – James Clear</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=ein%20hund%20namens%20money%20buch&amp;tag=mayamatcha-21&amp;ascsubtag=maya_b_ein-hund-namens-money-bodo-sch-fer" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">📈 Ein Hund namens Money – Bodo Schäfer</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=journal%20notizbuch%20dotted%20a5&amp;tag=mayamatcha-21&amp;ascsubtag=maya_b_dotted-journal-notizbuch-a5" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">📈 Dotted Journal / Notizbuch A5</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=6%20minuten%20tagebuch&amp;tag=mayamatcha-21&amp;ascsubtag=maya_b_6-minuten-tagebuch" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">📈 6-Minuten-Tagebuch</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=haushaltsbuch%20budgetplaner&amp;tag=mayamatcha-21&amp;ascsubtag=maya_b_haushaltsbuch-budget-planer" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">📈 Haushaltsbuch / Budget-Planer</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=rich%20dad%20poor%20dad%20buch%20deutsch&amp;tag=mayamatcha-21&amp;ascsubtag=maya_b_rich-dad-poor-dad-robert-kiyosaki" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">📈 Rich Dad Poor Dad – Robert Kiyosaki</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=gua%20sha%20jade%20roller%20set&amp;tag=mayamatcha-21&amp;ascsubtag=maya_c_gua-sha-jade-roller-set" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">✨ Gua Sha &amp; Jade-Roller Set</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=hyaluron%20serum%20feuchtigkeit&amp;tag=mayamatcha-21&amp;ascsubtag=maya_c_hyaluron-feuchtigkeitsserum" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">✨ Hyaluron-Feuchtigkeitsserum</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=get%C3%B6nte%20tagescreme%20lsf%2030&amp;tag=mayamatcha-21&amp;ascsubtag=maya_c_get-nte-tagescreme-mit-lsf" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">✨ Getönte Tagescreme mit LSF</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=seidenkissenbezug%20maulbeerseide&amp;tag=mayamatcha-21&amp;ascsubtag=maya_c_seidenkissenbezug" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">✨ Seidenkissenbezug</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=trockenb%C3%BCrste%20k%C3%B6rperb%C3%BCrste&amp;tag=mayamatcha-21&amp;ascsubtag=maya_c_trockenb-rste-body-brush" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">✨ Trockenbürste (Body Brush)</span>
+        
+      </a>
+      <a class="btn" href="https://www.amazon.de/s?k=duftkerze%20vanille%20sandelholz&amp;tag=mayamatcha-21&amp;ascsubtag=maya_c_duftkerze-vanille-sandelholz" target="_blank" rel="noopener nofollow sponsored">
+        <span class="btn-label">✨ Duftkerze (Vanille/Sandelholz)</span>
+        
+      </a>
+    <nav class="socials">
+    </nav>
+    <p class="disclosure">Alle Links sind Amazon-Partner-Links (Werbung). Kaufst du darüber, unterstützt du Maya – ohne Mehrkosten für dich. Maya ist eine KI-Kunstfigur (KI-generiert) · DH-LABS.</p>
+  </main>
 </body>
 </html>
